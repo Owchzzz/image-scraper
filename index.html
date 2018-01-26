@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>IMAGE PARSER</title>
+    </head>
+
+    <body>
+        <h1>Parser</h1>
+        <hr/>
+        <div id="parser">
+
+        </div>
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <script src="dist/imagescraper.bundle.js"></script>
+        <script>
+            var scraper = imagescraper({name:'test',url:'http:/www.google.com'});
+            
+            scraper.then( (val) => {
+                console.log('scraped images:',val);
+            });
+        </script>
+    </body>
+</html>
